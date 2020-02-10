@@ -99,7 +99,36 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
+  public void keepOnlyBlue() {
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (Pixel[] rowArray : pixels) {
+		  for (Pixel pixelObj : rowArray) {
+			  pixelObj.setGreen(0);
+			  pixelObj.setRed(0);
+		  }
+	  }
+  }
+  public void negate() {
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (Pixel[] rowArray : pixels) {
+		  for (Pixel pixelObj : rowArray) {
+			  pixelObj.setBlue(255 - pixelObj.getBlue());
+			  pixelObj.setGreen(255 - pixelObj.getGreen());
+			  pixelObj.setRed(255 - pixelObj.getRed());
+			  
+		  }
+	  }  
+  }
+  public void grayscale() {
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (Pixel[] rowArray : pixels) {
+		  for (Pixel pixelObj : rowArray) {
+			  pixelObj.setBlue((pixelObj.getBlue() + pixelObj.getGreen() + pixelObj.getRed()) / 3);
+			  pixelObj.setGreen((pixelObj.getGreen() + pixelObj.getRed() + pixelObj.getBlue()) / 3);
+			  pixelObj.setRed((pixelObj.getRed() + pixelObj.getBlue() + pixelObj.getGreen()) / 3);
+		  }
+	  }
+  }
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
@@ -225,7 +254,7 @@ public class Picture extends SimplePicture
    */
   public static void main(String[] args) 
   {
-    Picture beach = new Picture("U:/git/picture-lab-Basovart/images/beach.jpg");
+    Picture beach = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/beach.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();
