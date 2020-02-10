@@ -13,38 +13,55 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/beach.jpg");
+    Picture beach = new Picture("/U:/git/picture-lab-Basovart/images/beach.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();
   }
   public static void testKeepOnlyBlue() {
-	  Picture beach = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/beach.jpg");
+	  Picture beach = new Picture("/U:/git/picture-lab-Basovart/images/beach.jpg");
 	  beach.explore();
 	  beach.keepOnlyBlue();
 	  beach.explore();
   }
   public static void testNegate() {
-	  Picture beach = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/beach.jpg");
+	  Picture beach = new Picture("/U:/git/picture-lab-Basovart/images/beach.jpg");
 	  beach.explore();
 	  beach.negate();
 	  beach.explore();
   }
   public static void testGrayscale() {
-	  Picture beach = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/beach.jpg");
+	  Picture beach = new Picture("/U:/git/picture-lab-Basovart/images/beach.jpg");
 	  beach.explore();
 	  beach.grayscale();
 	  beach.explore();
   }
+  public static void testFixUnderwater() {
+	  Picture water = new Picture("/U:/git/picture-lab-Basovart/images/water.jpg");
+	  water.explore();
+	  water.fixUnderwater();
+	  water.explore();
+  }
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("/U:/git/picture-lab-Basovart/images/caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
-  
+  public static void testMirrorVerticalRightToLeft() {
+    Picture caterpillar = new Picture("/U:/git/picture-lab-Basovart/images/caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+  public static void testMirrorHorizontal() {
+    Picture caterpillar = new Picture("/U:/git/picture-lab-Basovart/images/caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -65,7 +82,7 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("images\\swan.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -85,6 +102,8 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
+    //testMirrorVerticalRightToLeft();
+	//testMirrorHorizontal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
