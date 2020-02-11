@@ -45,23 +45,30 @@ public class PictureTester
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("/U:/git/picture-lab-Basovart/images/caterpillar.jpg");
+    Picture caterpillar = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
   public static void testMirrorVerticalRightToLeft() {
-    Picture caterpillar = new Picture("/U:/git/picture-lab-Basovart/images/caterpillar.jpg");
+    Picture caterpillar = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVerticalRightToLeft();
     caterpillar.explore();
   }
   public static void testMirrorHorizontal() {
-    Picture caterpillar = new Picture("/U:/git/picture-lab-Basovart/images/caterpillar.jpg");
+    Picture caterpillar = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorHorizontal();
     caterpillar.explore();
   }
+  
+  public static void testMirrorHorizontalBotToTop() {
+	    Picture caterpillar = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/caterpillar.jpg");
+	    caterpillar.explore();
+	    caterpillar.mirrorHorizontalBotToTop();
+	    caterpillar.explore();
+	  }
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -89,8 +96,7 @@ public class PictureTester
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
-  public static void main(String[] args)
-  {
+  public static void main(String[] args) {
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
@@ -104,6 +110,7 @@ public class PictureTester
     //testMirrorVertical();
     //testMirrorVerticalRightToLeft();
 	//testMirrorHorizontal();
+	//testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
