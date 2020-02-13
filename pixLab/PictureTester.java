@@ -57,7 +57,7 @@ public class PictureTester
     caterpillar.explore();
   }
   public static void testMirrorHorizontal() {
-    Picture caterpillar = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/caterpillar.jpg");
+    Picture caterpillar = new Picture("/U:/git/picture-lab-Basovart/images/caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorHorizontal();
     caterpillar.explore();
@@ -72,12 +72,17 @@ public class PictureTester
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
-    Picture temple = new Picture("temple.jpg");
+    Picture temple = new Picture("/U:/git/picture-lab-Basovart/images/temple.jpg");
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
   }
-  
+  public static void testMirrorArms() {
+	  Picture temple = new Picture("/U:/git/picture-lab-Basovart/images/snowman.jpg");
+	    temple.explore();
+	    temple.mirrorArms();
+	    temple.explore();
+  }
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -112,7 +117,7 @@ public class PictureTester
 	//testMirrorHorizontal();
 	//testMirrorHorizontalBotToTop();
     //testMirrorTemple();
-    //testMirrorArms();
+    testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
