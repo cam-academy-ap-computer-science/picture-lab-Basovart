@@ -78,10 +78,16 @@ public class PictureTester
     temple.explore();
   }
   public static void testMirrorArms() {
-	  Picture temple = new Picture("/U:/git/picture-lab-Basovart/images/snowman.jpg");
+	  Picture temple = new Picture("images/snowman.jpg");
 	    temple.explore();
 	    temple.mirrorArms();
 	    temple.explore();
+  }
+  public static void testMirrorGull() {
+	  Picture gull = new Picture("images/seagull.jpg");
+	    gull.explore();
+	    gull.mirrorGull();
+	    gull.explore();
   }
   /** Method to test the collage method */
   public static void testCollage()
@@ -117,7 +123,7 @@ public class PictureTester
 	//testMirrorHorizontal();
 	//testMirrorHorizontalBotToTop();
     //testMirrorTemple();
-    testMirrorArms();
+    //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();

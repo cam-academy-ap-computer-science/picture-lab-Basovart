@@ -219,25 +219,43 @@ public class Picture extends SimplePicture
     }
     System.out.println(count);
   }
-  public void mirrorArms() {
-	  int mirrorPoint = 170;
-	    Pixel leftPixel = null;
-	    Pixel rightPixel = null;
-	    Pixel[][] pixels = this.getPixels2D();
-	    
-	    // loop through the rows
-	    for (int row = 155; row < 195; row++)
-	    {
-	      // loop from 13 to just before the mirror point
-	      for (int col = 105; col < mirrorPoint; col++)
-	      {
-	        leftPixel = pixels[row][col];      
-	        rightPixel = pixels[row]                       
-	        [mirrorPoint - col + mirrorPoint];
-	        rightPixel.setColor(leftPixel.getColor());
-	      }
-	    }
-	  }
+  public void mirrorArms()
+  {
+    int mirrorPoint = 193;
+    Pixel topPixel = null;
+    Pixel bottomPixel = null;
+    Pixel[][] pixels = this.getPixels2D();
+
+    // Left arm
+    for (int row = 158; row < mirrorPoint; row++)
+    {
+      // loop from 13 to just before the mirror point
+      for (int col = 103; col < 170; col++)
+      {
+        topPixel = pixels[row][col];      
+        bottomPixel = pixels[mirrorPoint - row + mirrorPoint][col];
+        bottomPixel.setColor(topPixel.getColor());
+      }
+    }
+  }
+  public void mirrorGull()
+  {
+    int mirrorPoint = 345;
+    Pixel rightPixel = null;
+    Pixel leftPixel = null;
+    Pixel[][] pixels = this.getPixels2D();   
+    
+    // Seagull
+    for (int row = 235; row < 323; row++)
+    {
+      for (int col = 238; col < mirrorPoint; col++)
+      {
+        rightPixel = pixels[row][col];      
+        leftPixel = pixels[row][mirrorPoint - col + mirrorPoint/3];
+        leftPixel.setColor(rightPixel.getColor());
+      }
+    }
+  }
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
