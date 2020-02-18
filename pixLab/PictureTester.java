@@ -83,10 +83,16 @@ public class PictureTester
 	    temple.mirrorArms();
 	    temple.explore();
   }
+  public static void testMirrorGull() {
+	  Picture gull = new Picture ("images\\seagull.jpg");
+	  gull.explore();
+	  gull.mirrorGull();
+	  gull.explore();
+  }
   /** Method to test the collage method */
   public static void testCollage()
   {
-    Picture canvas = new Picture("640x480.jpg");
+    Picture canvas = new Picture("images\\640x480.jpg");
     canvas.createCollage();
     canvas.explore();
   }
@@ -94,7 +100,7 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("images\\swan.jpg");
+    Picture swan = new Picture("/U:/git/picture-lab-Basovart/images/swan.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -117,12 +123,12 @@ public class PictureTester
 	//testMirrorHorizontal();
 	//testMirrorHorizontalBotToTop();
     //testMirrorTemple();
-    testMirrorArms();
+    //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
