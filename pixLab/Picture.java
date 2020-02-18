@@ -255,7 +255,7 @@ public class Picture extends SimplePicture
       {
         rightPixel = pixels[row][col];      
         leftPixel = pixels[row][mirrorPoint - col + mirrorPoint/3];
-        leftPixel.setColor(rightPixel.getColor());
+        leftPixel.setColor(rightPixel.getColor()); 
       }
     
     }

@@ -77,7 +77,7 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
-  public static void testMirrorArms() {
+  public static void testMirrorArms() { 
 	  Picture temple = new Picture("/U:/git/picture-lab-Basovart/images/snowman.jpg");
 	    temple.explore();
 	    temple.mirrorArms();
