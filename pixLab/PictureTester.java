@@ -100,7 +100,7 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("/U:/git/picture-lab-Basovart/images/swan.jpg");
+    Picture swan = new Picture("/Users/artyom/Desktop/Coding/picture-lab-Basovart/images/beach.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }

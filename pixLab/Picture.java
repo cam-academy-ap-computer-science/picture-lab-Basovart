@@ -225,7 +225,6 @@ public class Picture extends SimplePicture
     Pixel topPixel = null;
     Pixel bottomPixel = null;
     Pixel[][] pixels = this.getPixels2D();
-<<<<<<< HEAD
     for (int row = 158; row < mirrorPoint; row++)
     {
       for (int col = 103; col < 170; col++)
@@ -241,40 +240,9 @@ public class Picture extends SimplePicture
     		bottomPixel = pixels[mirrorPoint - row + mirrorPoint][col];
     		bottomPixel.setColor(topPixel.getColor());
     	}
-=======
+    }
+  }
 
-    // Left arm
-    for (int row = 158; row < mirrorPoint; row++)
-    {
-      // loop from 13 to just before the mirror point
-      for (int col = 103; col < 170; col++)
-      {
-        topPixel = pixels[row][col];      
-        bottomPixel = pixels[mirrorPoint - row + mirrorPoint][col];
-        bottomPixel.setColor(topPixel.getColor());
-      }
-    }
-  }
-  public void mirrorGull()
-  {
-    int mirrorPoint = 345;
-    Pixel rightPixel = null;
-    Pixel leftPixel = null;
-    Pixel[][] pixels = this.getPixels2D();   
-    
-    // Seagull
-    for (int row = 235; row < 323; row++)
-    {
-      for (int col = 238; col < mirrorPoint; col++)
-      {
-        rightPixel = pixels[row][col];      
-        leftPixel = pixels[row][mirrorPoint - col + mirrorPoint/3];
-        leftPixel.setColor(rightPixel.getColor());
-      }
->>>>>>> branch 'master' of https://github.com/cam-academy-ap-computer-science/picture-lab-Basovart.git
-    }
-  }
-  
   public void mirrorGull()
   {
     int mirrorPoint = 345;
@@ -372,32 +340,24 @@ public class Picture extends SimplePicture
     * @param edgeDist the distance for finding edges
     */
   public void edgeDetection(int edgeDist) {
+	  
 	Pixel topPixel = null;
 	Pixel botPixel = null;
     Pixel leftPixel = null;
     Pixel rightPixel = null;
+    
     Pixel[][] pixels = this.getPixels2D(); 
-    Color botColor = null;
-    Color rightColor = null;
-    for (int row = 0; row < pixels.length; row++) {
-      for (int col = 0; col < pixels[0].length-1; col++) {
+    for (int row = 0; row < pixels.length - 1; row++) {
+      for (int col = 0; col < pixels[0].length - 1; col++) {
         topPixel = pixels[row][col];
-        botPixel = pixels[row][col];
+        botPixel = pixels[row + 1][col];
     	leftPixel = pixels[row][col];
-        rightPixel = pixels[row][col+1];
-        rightColor = rightPixel.getColor();
-        botColor = botPixel.getColor();
-        if (leftPixel.colorDistance(rightColor) > edgeDist)
+        rightPixel = pixels[row][col + 1];
+        if (leftPixel.colorDistance(rightPixel.getColor()) > edgeDist || topPixel.colorDistance(botPixel.getColor()) > edgeDist)
           leftPixel.setColor(Color.BLACK);
         else
           leftPixel.setColor(Color.WHITE);
-        if (topPixel.colorDistance(botColor) > edgeDist)
-        	topPixel.setColor(Color.BLACK);
-        else
-        	topPixel.setColor(Color.WHITE);
       }
-      
-    
     }
   }
   
